@@ -1,0 +1,30 @@
+
+
+/* .negritas{
+    font-weight: bold;
+} */
+
+
+.pedidoFoto{
+
+    height: 250px;
+
+}
+
+.con-pedido{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(208, 255, 0, 0.219);
+}
+
+.cabeza{
+    background-color: rgb(135, 190, 222);
+    background-image: url(https://www.fastfoodmenuprices.com/wp-content/uploads/2016/10/p7.jpg);
+    height: 120px;
+}
+
+#none{
+    display: none;
+}

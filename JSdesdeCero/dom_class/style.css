@@ -1,0 +1,12 @@
+.foto_tyle {
+    width: 400px;
+    height: 400px;
+    background-color: turquoise;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

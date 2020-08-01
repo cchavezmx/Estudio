@@ -1,0 +1,113 @@
+*{
+    background-color: thistle;
+}
+
+kbd {
+    display: block;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+body{
+    
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.corral{
+
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+
+.animales{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
+    transition: all 0.1s ease;
+    font-size: 5rem;
+    border-radius: 3px;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.tocar {
+    transform: scale(1.1);
+    border-color: #ffffff;
+    box-shadow: 0 0 1rem #ffc600;
+
+}
+
+
+#borregui{
+background-image: url("assets/borregui.png");
+background-repeat: no-repeat;
+background-color: white;
+background-position: center;
+}
+
+#caballo{
+background-image: url("assets/caballo.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}
+
+#chivo{
+background-image: url("assets/chivo.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}
+
+#conejo{
+background-image: url("assets/conejo.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}
+
+#perro{
+background-image: url("assets/perro.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}
+
+#pollito{
+background-image: url("assets/pollito.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+
+}
+
+#puerqui{
+background-image: url("assets/puerqui.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}
+
+#vaca{
+background-image: url("assets/vaca.png");
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: center;
+}

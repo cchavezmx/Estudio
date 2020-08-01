@@ -1,0 +1,140 @@
+
+.navegacion{
+    padding: 10px;
+    align-items: center;
+    display: inline-flex;
+    margin-left: 1500px;
+    border: 2px teal;
+    
+}
+
+li{
+    display: inline-block;
+}
+
+.logo{
+    align-content: center;
+    margin-top: 200px;
+    margin-right: 500px;
+    margin-left: 800px;
+}
+
+.buscador{
+
+    background: white url(assets/img/lupa.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position-x: 10px;
+    background-position-y: 5px;
+    padding-left: 44px;
+    border-radius: 60px;
+    align-content: center;
+    background-color: transparent;
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.199);
+    outline: none;
+    display: flex;
+    margin-top: 19px;
+    margin-left: -95px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    height: 39px;
+    width: 460px;
+}
+
+.botones{
+    
+    color: #000;
+    margin-left: -50px;
+    align-content: center;
+    display: inline-flex;
+    
+}
+
+.bgoogle {
+
+    border-radius: 10px;
+    width: 190px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+/* .padre{
+    display: flex; /*Para poder usar el flex-direction: necesitamos añadir esta opcion; */
+    /* justify-content: flex-end; Los elementos a la derecha*/    
+    /* justify-content: flex-start; Los elementos a la izquierda */
+    /* justify-content: space-around;  Alrededor de ellos*/
+    /* justify-content: space-between;  a la misma distancia de ellos*/
+    /* justify-content: center; */
+    /*flex-direction: column; /* cambia la columna e invierte los ejes */
+    /*justify-content: space-around; /*mueve los elementos en el eje Y */
+    /*align-items: center; /*Este elemento lo necesitamos apara poder mover los elementos comentados con flex y justify */
+
+    /*border: 2px solid black;
+    height: 605px;
+} */
+
+.padre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 900px;
+    background-color: rgba(0, 195, 255, 0.11);
+}
+
+.hijo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid rgb(17, 160, 255);
+    height: 40%;
+    width: 40%;
+}
+.hija{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid green;
+    height: 40%;
+    width: 40%;
+}
+
+
+.saul{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid purple;
+    background-color: rgb(202, 182, 223);
+    height: 20%;
+    width: 20%;
+}
+
+.abril{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(247, 31, 31, 0.651);
+    background-color: rgb(205, 168, 245);
+    height: 20%;
+    width: 20%;
+}
+.centro{
+
+    border: 2px solid rgba(0, 0, 0, 0.651);
+    /* background-color: rgb(245, 168, 168); */
+    height: 20%;
+    width: 20%;
+}
+
+.tabla{
+    border: 1px solid rgba(0, 0, 0, 0.651);
+    /* background-color: rgb(245, 168, 168); */
+    height: 20%;
+    width: 20%;
+}

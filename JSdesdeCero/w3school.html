@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera Script</title>
+</head>
+<body>
+    <script src="w3school.js"></script>
+
+
+    <h1>Este elemento es gratis!?</h1>
+
+    <button type="button"
+onclick="document.getElementById('test').innerHTML = suma()">
+Click me to display Date and Time.</button>
+
+<p id="test"></p>
+
+
+
+<p id="start" onclick="start()">quiero cambiar esto.</p>
+
+<script>
+function start() {
+  document.getElementById("start").innerHTML = 
+  
+  let number1 = prompt('Dame un numero');
+  let number2 = prompt('Dame otro numero para sumar');
+  
+  suma = Number(number1) + Number(number2)
+
+  console.log('La suma de tus numeros es: ' + suma)
+}
+</script>
+
+
+
+
+
+</body>
+</html>

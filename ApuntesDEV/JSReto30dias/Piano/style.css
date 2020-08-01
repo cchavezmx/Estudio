@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
+
+
+*{
+    background-color: cornflowerblue;
+}
+
+body{
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    /* height: 250px;
+    width: 750px; */
+}
+
+
+
+.piano{
+
+
+    border: solid 2px black;
+    display: flex;
+    /* flex: 1;
+    min-height: 100vh; */
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    width: 750px;
+    
+
+}
+
+
+.tecla{
+
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 50px;
+    height: 250px;
+    /* background-color: white; */
+    transition: all 0.1s ease;
+    background-image: url('assets/white.png');
+    
+
+}
+
+
+.tocar{
+
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+
+span{
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px;
+    color: tomato;
+    
+}
+
+.tapa{
+    position: absolute;
+    top: 	37%;
+    /* bottom: 50%; */
+    width: 87%;
+    height: 50px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+
+.tapa p{
+    margin-top: 3px;
+    font-family: 'Lobster', cursive;
+    font-size: 16px;
+    letter-spacing: 3px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.teclasMayores{
+    border: solid 2px black;
+    display: flex;
+    /* flex: 1;
+    min-height: 100vh; */
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    width: 750px;
+    
+}
+
+
+.teclasMenores{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 	41%;
+    left: 10%;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0);
+    
+}
+
+
+.teclas-menores{
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 40px;
+    height: 120px;
+    background-image: url('assets/negro.png');
+    margin: 0px 0px 0px 10px;
+}
+
+.bloque1{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    left: 4%;
+}
+
+
+.bloque2{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    left: 9%;
+}
+
+.bloque3{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    left: 18%;
+}
+
+.bloque4{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    left: 23%;
+}

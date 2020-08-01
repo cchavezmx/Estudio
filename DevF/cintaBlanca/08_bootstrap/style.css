@@ -1,0 +1,16 @@
+body{
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}  
+
+
+.custom-nav{
+
+    background: rgb(156, 154, 154) !important;
+    
+}
+

@@ -1,0 +1,41 @@
+
+
+.container{
+    border: solid 2px red;
+}
+
+.user-reviwes{
+    border: solid 2px blue;
+}
+
+.review{
+    border:  solid 2px green;
+}
+
+.review_text{
+    border: solid 2px violet;
+}
+
+.review_user{
+    border: solid 2px black;
+}
+
+.review_photo{
+    border:  solid 2px yellow;
+}
+
+.review-user-box{
+    border: solid 2px rosybrown;
+}
+
+.review_user-name{
+    border: solid 2px rgb(88, 5, 88);
+}
+
+.review_user-date{
+    border:  solid 2px rgb(0, 195, 255) ;
+}
+
+.div review_rating{
+    border:  solid 2px rgb(129, 221, 116);
+}

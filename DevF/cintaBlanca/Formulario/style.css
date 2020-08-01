@@ -1,0 +1,109 @@
+:root{
+     --font-color: #5f5f5f; /* creeas digamos como una variable */
+     --font-hover-color: rgb(255, 0, 0);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(0, 0, 0, 0.658);
+    
+ 
+}
+
+.container {
+
+    width: 600px;
+    /* background-color: #ddd; */
+    padding: 2.5em;
+    background-color: white;
+    box-shadow: 0px 15px 35px rgb(50,50,93,.1), 0 5px 15px rgb(0,0,0,.07);
+
+}
+
+form-group{
+    margin-bottom: 1.5em;
+
+}
+
+.form-label {
+
+    font-size: .75em;
+    color: var(--font-color);  /*Con var(--font-color) llamas a la variable en root asignada. */
+    display: inline-block;    
+    opacity: 0;
+    transition: all .3s;   
+    transform: translateX(-50px);  
+    
+}
+
+.form-control {
+    box-shadow: none;
+    border-radius: 0;
+    border-color: #ccc;
+    border-style: none none solid none;
+    width: 100%;
+    font-size: 1.25em;
+    transition: all .6s;
+}
+
+.form-control::placeholder{  /*el Placeholder es la etiqueta que se le pone a las cajas de texto como sugerencia */
+    color: rgb(167, 167, 167);
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--font-hover-color);
+    outline: none;
+
+}
+
+.form-group:focus-within{
+   transform: scale(1.1,1.1);   /*hace que se agrande el espacio para escribir*/
+}
+
+.form-control:invalid{          /* le añade efectos de validacion ayudandese de la etiqueta required dentro del form-control*/
+   border-color: red;
+}
+
+
+.form-control:valid:focus{            /* le añade efectos de validacion ayudandese de la etiqueta required dentro del form-control*/
+    border-color: rgb(0, 255, 34);
+ }
+
+
+.btnSend {
+    background: 0 0 #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: var(--font-color);
+    font-size: 1em;
+    padding: 10 50px;
+    text-transform: uppercase;
+}
+
+.btnSend:hover{
+    border-color: var(--font-hover-color);
+    color: var(--font-hover-color);
+}
+
+textarea{
+    resize: none; /*Con este elemento la caja de texto no se puede ampliar. */
+}
+
+
+.focused > .form-label{
+    opacity: 1;
+    transform: translateX(30px);
+
+}
+
+.boton{
+    display: flex;
+    height: 3em;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

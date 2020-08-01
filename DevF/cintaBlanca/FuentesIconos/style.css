@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Modak&display=swap');
+
+
+ @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+*{
+    background-color: aquamarine;
+}
+
+
+/* 
+h1{
+    font-family: 'Modak', cursive;
+    font-size: 130px;  /* Preferred icon size */
+
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 740px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  h2{
+    font-family: 'Anton', sans-serif;
+    font-size: 130px;  /* Preferred icon size */
+  }
