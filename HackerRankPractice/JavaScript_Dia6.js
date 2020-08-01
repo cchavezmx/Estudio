@@ -43,10 +43,32 @@
 
 // oddEven(sArray)
 
-let test = 'Hacker Rank'
+   // let odd = modelo.filter((value, index) => {index % 2 === 0) 
+    // let even = modelo.filter((value, index) => index % 2 !== 0)
+
+let test = '2  hacker ranck'
 
 
 
+function dia6(input) {
 
+    array = test.substring(0,test.length).valueOf
 
-console.log(challenge(test))
+    let odd = array.filter((value, index) => index % 2 === 0).join('')
+
+    let even = array.filter((value, index) => index % 2 !== 0).join('')
+
+    
+
+    console.log(`${odd} ${even}`)
+
+    console.log(array)
+   
+
+    
+}
+
+ dia6(test)
+
+let word = test.substring(0,test.length)
+console.log(word)
