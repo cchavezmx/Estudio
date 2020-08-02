@@ -1,74 +1,21 @@
 // con un String llamado S de N de largo index de 0 to N - 1 imprimir
 // Separar el string en espacios, por cada nuevo string imprimir index pares y index nones
+// SIN CONTAR EL NUMERO DE INCIO DEL STRING
 
 
+let input = '2  hacker ranck'
 
-// console.log(s[0])
+function buldierWord(string) {   // CREAMOS UNA FUNCION QUE VA A TOMAR CADA UNO DE LOS ELEMENTOS DEL ARREGLO, EL CUAL LO SEPARA POR ELEMENTOS PARA PODER SABER SI SON PARES O NONES
 
-
-//Funciones flecha, se declaram con const, se crea el nombre de la consto, se pone el igual, se pone los datos que puede aceptar la funcion, y se usa la flecha seguido
-// las flechas
-
-// const toarray = (string) =>{
+    let array =string.split('')   // SEPARA EL ITEM
     
-//     let array = []
-
-//     for(let i = 0; i < string.length; i++){
-//         array.push(s[i])
-        
-//     };
-//     return array
-// };
-
-// let sArray = toarray(s)
-
-// console.log(sArray)
-
-// let oddEven = (array) =>{
-    
-//     this.array = array
-//     odd ="";
-//     even ="";
-
-//       for(let j = 0; j < array.length; j++){
-//         if( j % 2 === 0){
-//             odd = odd + array(j);
-//         }else{
-//             even = even + array(j);
-//         }
-//     }
-//     console.log(odd + ' ' + even)
-
-// }
-
-// oddEven(sArray)
-
-   // let odd = modelo.filter((value, index) => {index % 2 === 0) 
-    // let even = modelo.filter((value, index) => index % 2 !== 0)
-
-let test = '2  hacker ranck'
-
-
-
-function dia6(input) {
-
-    array = test.substring(0,test.length).valueOf
-
-    let odd = array.filter((value, index) => index % 2 === 0).join('')
-
-    let even = array.filter((value, index) => index % 2 !== 0).join('')
-
-    
-
-    console.log(`${odd} ${even}`)
-
-    console.log(array)
-   
-
+    let odd = array.filter((value, index) => index % 2 === 0).join('') // SELECIONA LOS PARES
+    let even = array.filter((value, index) => index % 2 !== 0).join('') // SELECIONA LOS IMPARES
+    return console.log((`${odd} ${even}`)) // CONCATENA Y RETORNA 
     
 }
-
- dia6(test)
-
-let word = test.substring(0,test.length)
-console.log(word)
+let prueba = input.split(' ').slice(1)   //TOMAMOS EL STRING Y LO TRANSFORMAMOS EN UN ARREGLO, COMENZAMOS DESDE EL INDEX 1 DEL STRING PARA SALTAR EL NUMERO DE LA CABEZERA DEL STRING
+//EN EL SITIO USA \n para separar los espacios. 
+let word = prueba.forEach((value) => {buldierWord(value)}) // CREAMOS LA VARIABLE QUE CONTENDRA EL RESULTADO DESEADO, CON UN FOREACH DE CADA UNO DE LOS ELEMENTOS LE APLICAREMOS LA FUNCION QUE SEPARARA LAS LETRAS
+ 
+console.log(prueba)
