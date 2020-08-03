@@ -12,35 +12,22 @@ let totalMulti = multis.map(item => item * 5)
 
 
 
-//Multiplicar entre sí los elementos del siguiente arreglo -> [6, 5, 4]
-
-let arregloMulti = [6,5,4]
-
-function multitud (total, value) {
-    return total * value
-}
-
-let multitotal =  arregloMulti.reduce(multitud)
-
-console.log(`Multiplicado el total de los elementos  =====> ${multitotal}`)
-console.log(multitotal)
-
-
 //-----------------------------------------//
 //              METODO REDUCE              //
 //-----------------------------------------//
 
 // Sytax => array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+//--------------------------------------------//
+// Suma Cada elemento de izquierda a derecha  //
+//   Por omicion totma el valor iniciar en 0  //
+//--------------------------------------------//
+//Multiplicar entre sí los elementos del siguiente arreglo -> [6, 5, 4]
 
-numerosPrueba = [5,10,50]
+let arregloMulti = [6,5,4]
+let multitotal =  arregloMulti.reduce((acumulado, valor) => acumulado * valor)
 
-let pruebaReduce = numerosPrueba.reduce((total, currentValue, currentIndex, arr) => `${currentValue}`)
-
-let xd = arregloMulti.reduce((valor) => valor)
-
-
-console.log('Prueba rediuce ' + xd)
-
+console.log(`Multiplicado el total de los elementos  =====> ${multitotal}`)
+console.log(multitotal)
 
 
 //Del arreglo siguiente, elegir los elementos que sean mayores que 5 -> [12, 2, 1, 5, 8]
