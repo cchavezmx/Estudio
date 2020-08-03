@@ -26,6 +26,23 @@ console.log(`Multiplicado el total de los elementos  =====> ${multitotal}`)
 console.log(multitotal)
 
 
+//-----------------------------------------//
+//              METODO REDUCE              //
+//-----------------------------------------//
+
+// Sytax => array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+numerosPrueba = [5,10,50]
+
+let pruebaReduce = numerosPrueba.reduce((total, currentValue, currentIndex, arr) => `${currentValue}`)
+
+let xd = arregloMulti.reduce((valor) => valor)
+
+
+console.log('Prueba rediuce ' + xd)
+
+
+
 //Del arreglo siguiente, elegir los elementos que sean mayores que 5 -> [12, 2, 1, 5, 8]
 
 
