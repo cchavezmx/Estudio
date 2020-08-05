@@ -20,8 +20,6 @@ let word = prueba.forEach((value) => {buldierWord(value)}) // CREAMOS LA VARIABL
  
 // console.log(prueba)
 
-
-
 let paises = ["México", "Panamá", "Guatemala", "El Salvador"]
 
 function numeros(string){return Number(string.length)}  // crea los numeros 
