@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+            class Person {
+                constructor(fristName, lastName, id){
+                this.fristName = fristName;
+                this.lastName = lastName;
+                this.id = id;
+
+                }
+
+            }
+
+
+            class Student extends Person {
+                constructor(fristName, lastName, id, score){
+                    super(fristName, lastName, id)
+                    
+                };
+                static score(a){
+
+                    return  a
+                  
+
+                }
+
+
+            }
+           
+            
+
+            let  miFuncionA = () => {
+
+
+            estudent = new Student('Carlos', 'Chavez', '5020')
+
+            console.log(Student.score(4))
+
+
+
+            // const valor = estudent.keys();
+            
+            document.write(estudent.fristName + "<br>")
+            document.write(estudent.lastName+ "<br>")
+            document.write(estudent.id + "<br>")
+            document.write(estudent.score + "<br>")
+            console.log(estudent)
+            
+        }
+
+
+
+</script>
+
+</head>
+<body onload="miFuncionA()">
+
+
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        
+        function nestedLoop () {
+
+            let  numberGRid = [
+        
+            [1, 1, 1, 0, 0, 0],
+            [0, 1, 0, 0, 0, 0],
+            [1, 1, 1, 0, 0, 0],
+            [0, 0, 2, 4, 4, 0],
+            [0, 0, 0, 2, 0, 0],
+            [0, 0, 1, 2, 4, 0]
+
+            ]
+            
+        let total = -63      
+        for(let i = 0; i < numberGRid.length-2; i++){
+            for(let j = 0; j < numberGRid[i].length-2; j++){
+
+                let suma = 0
+                suma = numberGRid[i][j]+
+                       numberGRid[i][j+1]+
+                       numberGRid[i][j+2]+
+                       numberGRid[i+1][j+1]+
+                       numberGRid[i+2][j]+
+                       numberGRid[i+2][j+1]+
+                       numberGRid[i+2][j+2];
+                
+                total = suma    
+                    
+                console.log(total)
+                document.write(total)        
+
+
+            }
+            
+        }
+
+        const string = 'hi there';
+        const usingObjectAssign = Object.assign([], string);
+        console.log(usingObjectAssign)
+
+
+        
+        }
+        
+        </script>
+</head>
+<body onload="nestedLoop();">
+    
+<p>Algo debe de pasar</p>
+
+
+
+</body >
+</html>

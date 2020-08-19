@@ -2,6 +2,18 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "..\\ReactPracticas\\miprimerapp"
+		},
+		{
+			"path": "..\\ReactPracticas\\clase_devf"
+		},
+		{
+			"path": "..\\DevF_Oficial\\to-do-list-b43"
+		},
+		{
+			"path": "..\\..\\html5\\GrupoIntecsa"
 		}
 	],
 	"settings": {}
