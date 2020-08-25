@@ -1,16 +1,5 @@
 //CONFIGURACION
-
-const express = require('express');
-const app = express()
-const PORT = 4000
-
-//ENDPOINT 
-// PETICION DE TIPO GET 
-
-app.get('/', (req, res) => {
-    res.send('Hola Mundo');
-
-})
+const { app, PORT } = require('./src/app/app')
 
 // EJECUCION DE LA FUNCION 
 

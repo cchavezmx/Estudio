@@ -6,9 +6,13 @@ const tareasRutas = express.Router() // se debe ocupar el router
 let tareas = []
 
 
+// METODO GET
+
 tareasRutas.get('/', function (req, res) {
     res.status(200).json({ response: tareas}) // dentro de la estructura debemos de meter res.status(200)  <= el codigo de la respuesta. 
-  })  
+  }) 
+  
+// METODO POST   
 
 tareasRutas.post('/', (req, res) => {
       const tarea = req.body
@@ -16,6 +20,7 @@ tareasRutas.post('/', (req, res) => {
       res.status(201).json({response: `Se creo la tarea`})
   })
 
+// METODO DELETE
 
 tareasRutas.delete('/:id', (req, res) => {
     const id = Number(req.params.id)
@@ -26,6 +31,7 @@ tareasRutas.delete('/:id', (req, res) => {
 
   })
 
+// METODO PUT
 
 tareasRutas.put('/:id', (req, res) => {
     const id = req.param.id
