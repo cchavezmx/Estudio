@@ -1,8 +1,6 @@
 // configuracion para el CRUD 
 const { Tickets } = require('../models/Tickets')
-
 const express = require('express')
-const Products = require('../models/Products')
 const appTickets = express.Router()
 
 
@@ -24,7 +22,8 @@ appTickets.post('/', (req, res) => {
 // Get all Tickets
 
 appTickets.get('/', (_, res) => {
-        Tickets.find()    
+        Tickets.find()
+        .populate('products')  // se agrega el populate para realacionar tablas y ver los valores relacionados en la base de datos 
         .then(mongoRes => res.status(200).json({ messege: mongoRes}))
         .catch(mongoErr => res.status(400).json({ messege: mongoErr}))
 })
@@ -52,16 +51,24 @@ appTickets.delete('/:id', (req, res) => {
 
 appTickets.patch('/:id/checkout', (req, res) => {
 
-    const { id, body } = req.params
+    const { id } = req.params
     
     Tickets.findById(id)
-        .populate('products')
-        .then(ticket => {
-        // en una variable solo tomar el valor del precio de los productos
-        const prices = ticket.products.map(product => product.price)
-        console.log(prices)
-            
-            res.status(200).json({messege: `Ticket ${ticket} Modificado`})})
+        .populate('products') // este es el nombre de la base de datos dentro de la instancia TIENDA! dentro de mongo Atlas
+
+        .then((ticket) =>{
+        // 1> Obtenemos el array del costo de todos los productos y lo sumamos
+           const subtotal = ticket.products.map(product => product.price).reduce((a, b) => a + b)
+        // 2> Calcular en IVA
+            const taxes = subtotal * 0.16
+        // 3> PrecioFinal
+            const total = subtotal  + taxes
+        // 4> Mandamos los datos al ticket
+            return Tickets.findByIdAndUpdate(id, { subtotal, taxes, total }, { new: true })
+            // al Ser una funcion que requiere tiempo lo retornamos para poder usar el resultado con otro then
+            // El findByIdAndUpdate requiere = el id a buscar, un objeto con las variables que deseamos cambiar, y el valor de new: true           
+        })
+        .then(respTickets => res.status(200).json(respTickets))
         .catch(mongoErr => res.status(401).json({messege: mongoErr}))
     
 })

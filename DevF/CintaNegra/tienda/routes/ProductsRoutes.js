@@ -29,7 +29,6 @@ appProducts.get('/', (_, res) => {
 // Get by ID
 
 appProducts.get('/:id', (req, res) => {
-    console.log(req)
     Products.findById(req.params.id)
     .then(mongoRes => res.status(200).json({ messege: mongoRes }))
     .catch(mongoErr => res.status(404).json({ messege: mongoErr }))
