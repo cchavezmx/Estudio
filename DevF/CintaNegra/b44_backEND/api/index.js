@@ -20,6 +20,7 @@ app.get('/', (req, res) => res.send(`Hola: ${req.date}`))
 // add Index de la vista de Router
 app.use(require('../router/'))
 
+
 app.use(errors()) // agrega el error en el json de la consulta. 
 
 // Exportamos los modulos de la app y el puerto de la aplicación 

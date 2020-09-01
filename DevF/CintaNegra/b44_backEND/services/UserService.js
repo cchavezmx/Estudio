@@ -23,4 +23,8 @@ module.exports = {
 
     // buscamos si el email ya se encuentra en la base de datos con findOne traemos el resultado
     findByEmail: (email) => User.findOne({ email }),
-}
+
+    // Logica de signup
+
+    signup: (body) => new User(body).save(),
+ }
