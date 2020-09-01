@@ -7,7 +7,7 @@ const { showDate } =require('../middlewares')
 const { errors } =require('celebrate')
 
 // morgan para log de la consola 
-app.use(morgan('combined'))
+app.use(morgan('dev'))
 
 // Pasamos los midelware
 app.use(express.urlencoded({ extended: true }))
