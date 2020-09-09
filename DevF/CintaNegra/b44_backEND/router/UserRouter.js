@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+// MILDDLEWARES
+router.use(express.urlencoded({ extended: true }));
+router.use(express.json({ extended: true }));
+
 const { UserValidator } = require('../validators')
 const { UserController } = require('../controller/')
+
 
 // Vista de Rutas
 router.get('/api/v1/user/', UserController.get)

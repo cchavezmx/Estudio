@@ -1,5 +1,5 @@
 const { UserService } = require('../services/')
-const User = require('../models')
+const { comparePassword, createToken } = require('../util/')
 
 
 module.exports = {
@@ -34,6 +34,7 @@ module.exports = {
             res.status(401).json(console.log(error))
         }
     },
+
     patch: async (req, res) => {
         try {
             // 1) Verificamos si existe el id
@@ -69,5 +70,34 @@ module.exports = {
         } catch (error) {
             res.status(404).json(console.log(error))
         }
+    },
+    login: async (req, res) => {
+        //1) Verificar que si existe el usuario 
+        const { email, password } = req.body
+        try {
+        // Guradamos dentro de una variable el valor bolleano para saber si el email si existe dentro de nuestra base de datos
+        const user = await UserService.findByEmail(email)
+        
+        // Si el usuario no existe, mandamos un error
+        if(!user) res.status(404).json({ message: 'Error en las credenciales' })
+
+        // verificamos la contraseña
+        const isValid =  comparePassword(user.password, password)
+        if(!isValid) res.status(404).json({ message: "Error en las crendeciales"})
+
+        // Generamos el Token
+        const token = createToken(user);
+        console.log('aqui va un token' + token)
+        if(!token) res.status(500).json({message: 'Error al generar token'})
+
+        //verificamos que el token sea real
+
+
+        // Si el las credenciales son correctas y se genero el token, entonces damos entrada.
+        res.status(201).json({ message: 'Login successful', token: token })
+
+        } catch (err){
+            res.status(400).json(console.log(err))
+        }    
     }
 }

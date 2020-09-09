@@ -7,7 +7,7 @@ const { showDate } =require('../middlewares')
 const { errors } =require('celebrate')
 
 // morgan para log de la consola 
-app.use(morgan('dev'))
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
 // Pasamos los midelware
 app.use(express.urlencoded({ extended: true }))
@@ -18,6 +18,9 @@ app.use(showDate)
 app.get('/', (req, res) => res.send(`Hola: ${req.date}`))
 
 // add Index de la vista de Router
+// aqui podemos agregar la ruta predeterminada. Esto puede servir para hacer un cambio de versiones dentro de nuestra estrutura.
+// app.use('/api/v1', require('../router/'))
+
 app.use(require('../router/'))
 
 
